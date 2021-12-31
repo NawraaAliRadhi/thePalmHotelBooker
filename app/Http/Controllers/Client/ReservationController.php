@@ -16,10 +16,20 @@ class ReservationController extends Controller
     public function show(Request $request, Room $room)
     {
         //First check if room has reservation
-        $check = $room->reservations()->whereDate('checkin', '<=', $request->checkin)
-            ->whereDate('checkout', '>=', $request->checkout)->first();
-
-        if(!is_null($check)) {
+        
+        $rooms = Room::query();
+        $rooms = $rooms->whereHas("reservations", function ($query) use ($request) {
+            //$query->whereDate('checkin', '<=', $request->checkin)->whereDate('checkout', '>=', $request->checkout);
+            $query->where(function($query) use ($request){
+                $query->where('checkin', '<=' , $request->checkin);
+                $query->where('checkout', '>=', $request->checkin);
+            })->orWhere(function($query)use($request){
+                $query->where('checkin', '<=' , $request->checkout);
+                $query->where('checkout', '>=', $request->checkout);
+            });
+        })->where('id', $room->id);
+        
+        if($rooms->count() > 0) {
             exit("This room has been booked. Go to <a href='/rooms'>rooms</a> to see others");
         }else{
             return view('client.booking', compact('room'));
