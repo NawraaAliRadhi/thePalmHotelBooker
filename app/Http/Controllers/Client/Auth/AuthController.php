@@ -24,7 +24,7 @@ class AuthController extends Controller
     public function processLogin(Request $request)
     {
         $this->validate($request, [
-            'email' => 'required|exists:users,email',
+            'email' => 'required|exists:users,email|email',
             'password' => 'required',
         ]);
 
@@ -38,7 +38,7 @@ class AuthController extends Controller
     public function processRegister(Request $request)
     {
         $this->validate($request, [
-            'email' => 'required|unique:users,email',
+            'email' => 'required|unique:users,email|email',
             'password' => 'required|confirmed',
             'name' => 'required|min:3'
         ]);

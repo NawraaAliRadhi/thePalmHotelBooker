@@ -44,7 +44,7 @@
                     </div><!-- / column -->
 
                     <div class="col-md-7">
-                        @if ($room->roomImages[0]['image_path'])
+                        @if (isset($room->roomImages[0]['image_path']))
                             <img src="{{ \App\Helpers\Helper::getImageUrl($room->roomImages[0]['image_path']) }}" alt="project-image"
                                 class="rounded" width="100%">
                         @endif

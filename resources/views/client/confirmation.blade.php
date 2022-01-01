@@ -179,13 +179,17 @@ $checkout = new DateTime($_GET['checkout']);
                     </tr>
                     <tr>
                       <td>Tax</td>
-                      <td>BD80</td>
+                      <td>BD{{ ($room->price_per_night * $checkout->diff($checkin)->format("%a")) * .05 }}</td>
                     </tr>
                   </tbody>
                   <tfoot>
                     <tr>
                       <td>Total</td>
-                      <td>{{\App\Helpers\Helper::displayMoney($room->price_per_night * $checkout->diff($checkin)->format("%a") + 80)}}</td>
+                      <?php 
+                        $totalPriceWithoutTax = $room->price_per_night * $checkout->diff($checkin)->format("%a");
+                        $totalTax = $totalPriceWithoutTax * (config('setting.tax') / 100);
+                      ?>
+                      <td>{{\App\Helpers\Helper::displayMoney($totalPriceWithoutTax + $totalTax)}}</td>
                     </tr>
                   </tfoot>
                 </table>
@@ -193,10 +197,9 @@ $checkout = new DateTime($_GET['checkout']);
               <div class="sidebar-support">
                 <h3>Help and Support</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vivamus ut arnare
+                  Contact with us 24 hours 
                 </p>
-                <p><i class="fa fa-phone"></i> 977 - 222 - 444 - 666</p>
+                <p><i class="fa fa-phone"></i> +973 1777-8574</p>
               </div>
             </div>
           </div>

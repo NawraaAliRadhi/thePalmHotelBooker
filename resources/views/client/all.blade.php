@@ -1,3 +1,10 @@
+<style>
+  svg {
+      width: 24px;
+      height: 24px;
+      padding-top: 10px;
+  }
+</style>
 @extends("layouts.client.main")
 @section("content")
 <section class="breadcrumb-outer">
@@ -348,8 +355,8 @@
             <div class="info-1 list-sidebar-item">
               <i class="fa fa-phone-volume"></i>
               <h5>Need help? Call us</h5>
-              <a href="tel://004542344599" class="phone">+45 423 445 99</a>
-              <small>Monday to Friday 9.00am - 7.30pm</small>
+              <a href="tel://004542344599" class="phone">+973 1777-8574</a>
+              <small>Available 24 hours</small>
             </div>
           </div>
         </div>

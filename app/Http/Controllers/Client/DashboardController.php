@@ -16,7 +16,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $reservations = auth()->user()->reservations()->withoutCancelled()->get();
+        $reservations = auth()->user()->reservations()->whereNull('cancelled_at')->get();
         $active = "dashboard";
         return view("client.dashboard.dashboard", compact('reservations', 'active'));
     }

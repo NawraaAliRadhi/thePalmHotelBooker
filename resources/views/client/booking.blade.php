@@ -260,7 +260,6 @@
                     <input type="hidden" name="checkout" value="{{strip_tags($_GET['checkout'])}}" />
                     <input type="hidden" name="number_of_nights" value="{{$checkout->diff($checkin)->format("%a")}}" />
                     <input type="hidden" name="guest_numbers" value="{{strip_tags($_GET['guests'])}}" />
-                    <input type="hidden" name="total_price" value="{{strip_tags($room->price_per_night * $checkout->diff($checkin)->format("%a") + 80)}}" />
                     <input type="hidden" name="user_id" value="{{auth()->user()->id}}" />
 
                     <div class="row">
@@ -296,7 +295,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <input type="text" placeholder="Card Number" />
+                          <input type="text" placeholder="Card Number" required />
                         </div>
                       </div>
                       <div class="col-md-6">

@@ -4,7 +4,7 @@
     <div class="slider">
        <div class="swiper-container">
           <div class="swiper-wrapper">
-             <div class="swiper-slide" style="background-image:url(/client/images/slider/slider3.jpg)">
+             <div class="swiper-slide" style="background-image:url(/client/images/slider/slider-bahrain.jpg)">
                 <div class="swiper-content">
                    <h1 data-animation="animated fadeInUp">Explore & Enjoy With<span> The Palm Hotel</span></h1>
                    <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or mar-right-10"><i class="fa fa-book"></i> Explore Our Rooms</a>
@@ -64,7 +64,7 @@
              </div>
              <div class="table-item">
                 <div class="form-btn">
-                    <a class="btn btn-orange" onclick="document.getElementById('form-id').submit()">Book Now</a>
+                    <a class="btn btn-orange" onclick="document.getElementById('form-id').submit()">Check Availability</a>
                 </div>
              </div>
           </div>
@@ -76,15 +76,19 @@
     <div class="container">
        <div class="section-title">
           <h2>About <span>Us</span></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+          <p>The Palm Hotel is located near Bahrain World Trade Center, just a 10-minute walk from the Avenues.</p>
        </div>
        <div class="about-outer">
           <div class="row">
              <div class="col-lg-6">
                 <div class="about-content">
                    <h3 class="mar-bottom-30">Finest and Luxurious Hotel in the Town</h3>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius iaculis gravida. Nunc vel maximus libero. Quisque ligula nisi, hendrerit et scelerisque et, scelerisque vitae magna. Integer sollicitudin, ex auctor iaculis tempor, mauris odio accumsan odio.</p>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius iaculis gravida. Nunc vel maximus libero. Quisque ligula nisi, hendrerit et scelerisque et, scelerisque vitae magna. Integer sollicitudin, ex auctor iaculis tempor, mauris odio accumsan odio.</p>
+                   <p>The Palm Hotel offers ultimate comfort and luxury. This 9-storied hotel is a beautiful 
+                     combination of traditional grandeur and modern facilities. The 255 exclusive guest rooms are 
+                     furnished with a range of modern amenities such as internet access, cofee bars, city maps, etc</p>
+                   <p>International 
+                     direct-dial phone and safe are also available in any of these rooms. Wake-up call
+                      facility is also available in these rooms.</p>
                    <a class="btn btn-orange mar-top-10">KNOW MORE ABOUT US <i class="fas fa-angle-double-right"></i></a>
                 </div>
              </div>
@@ -92,10 +96,10 @@
                 <div class="about-image">
                    <div class="image-box">
                       <div class="image-1 abt-image">
-                         <img src="/client/images/about1.jpg" alt="image">
+                         <img src="/client/images/bahrain-places1.png" alt="image">
                       </div>
                       <div class="image-2 abt-image">
-                         <img src="/client/images/about2.jpg" alt="image">
+                         <img src="/client/images/bahrain-places2.png" alt="image">
                       </div>
                    </div>
                    <div class="image-box">
@@ -103,7 +107,7 @@
                          <img src="/client/images/about3.jpg" alt="image">
                       </div>
                       <div class="image-4 abt-image">
-                         <img src="/client/images/about4.jpg" alt="image">
+                         <img src="/client/images/bahrain-places3.png" alt="image">
                       </div>
                    </div>
                 </div>
@@ -116,7 +120,7 @@
     <div class="container">
        <div class="section-title">
           <h2>Explore <span>Rooms</span></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+          <p> Explore the variey of rooms we have and enjoy your stay with us in The Palm Hotel. </p>
        </div>
        <div class="room-outer">
           <div class="row">

@@ -5,7 +5,7 @@
           <div class="links links-left">
              <ul>
                 <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>info@thepalmhotel.com</a></li>
-                <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 977-222-333-444</a></li>
+                <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> +973 1777-8574</a></li>
                 <li>
                    <select>
                       <option>Eng</option>

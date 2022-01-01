@@ -94,6 +94,7 @@ class RoomController extends Controller
 
     public function edit(Room $room)
     {
+       // return $room->roomImages;
         return view("admin.rooms.edit")->with("room", $room);
     }
 
@@ -181,6 +182,12 @@ class RoomController extends Controller
         }
         $room->roomReviews()->delete();
         $room->reservations()->delete();
+
+        /**
+         * To delte many to many associations, we use detach instead of delete() method
+         * @see https://laravel.com/docs/8.x/eloquent-relationships#attaching-detaching
+         */
+        $room->room_amenities()->detach();
         $room->delete();
 
         return redirect()

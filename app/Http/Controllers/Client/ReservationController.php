@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Mail\BookingDetails;
 use App\Reservation;
 use App\Room;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -38,6 +39,13 @@ class ReservationController extends Controller
 
     public function store(Request $request, Room $room)
     {
+        $this->validate($request, [
+
+        ]);
+        $totalChargeWithoutTax = $room->price_per_night * Carbon::parse($request->get('checkin'))->diffInDays(Carbon::parse($request->get('checkout')));
+        $totalTax = $totalChargeWithoutTax * (config('setting.tax') / 100);
+        $request['total_price'] = $totalChargeWithoutTax + $totalTax;
+
         $reservation = DB::transaction(function () use ($room, $request) {
             //First check if room has reservation
             $reservation = $room->reservations()->create($request->only('total_price', 'guest_numbers', 'number_of_nights', 'checkin', 'checkout', 'user_id'));
